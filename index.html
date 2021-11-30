@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tes Komgrid</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="init()">
+    <div class="inputWrapper">
+      <p>Fps:</p>
+      <input type="number" name="fps" id="fps" placeholder="Isi fps">
+      <p>Links Image:</p>
+      <textarea
+        name="links"
+        id="links"
+        cols="50"
+        rows="30"
+        placeholder="Isi link disini dipisah dengan Enter"
+      ></textarea>
+    </div>
+    <div class="img_wrapper" id="image_wrapper"></div>
+    <div class="controller" id="controller">
+      <button onmousedown="resetLinks()">Submit links</button>
+      <div class="frameCount">
+        <p>frame =</p>
+        <p id="index_wrapper">0</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
