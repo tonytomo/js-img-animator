@@ -38,7 +38,7 @@ function changeImg() {
 }
 
 function addIndex() {
-  if (index == 9) {
+  if (index == myscrimg.length - 1) {
     index = 0;
   } else {
     index++;
@@ -56,7 +56,7 @@ function resetLinks() {
 
   console.log("timer = " + 1000 / fps.value);
 
-  if (allLinks.length == 10 && parseInt(fps.value) > 0) {
+  if (allLinks.length > 1 && parseInt(fps.value) > 0) {
     clearInterval(timeInterval);
     myscrimg = allLinks;
     timeInterval = setInterval(changeImg, 1000 / parseInt(fps.value));

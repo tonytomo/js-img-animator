@@ -76,6 +76,7 @@ textarea, input {
     outline: none;
     border: none;
     font-size: 10pt;
+    font-family: monospace;
     background-color: #222;
     padding: 10px;
     color: #fff;

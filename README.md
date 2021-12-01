@@ -1,3 +1,3 @@
 # Animate Images
 
-Aplikasi pembuat animasi dari 10 link address gambar.
+Aplikasi pembuat animasi dari gambar-gambar yang didapat dari link address.
