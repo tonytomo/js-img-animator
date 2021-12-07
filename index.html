@@ -11,8 +11,14 @@
   <body onload="init()">
     <div class="inputWrapper">
       <p>Fps:</p>
-      <input type="number" name="fps" id="fps" placeholder="Isi fps">
-      <p>Links Image:</p>
+      <input type="number" name="fps" id="fps" placeholder="Isi fps" />
+      <div class="row">
+        <p>Links Image:</p>
+        <div class="row">
+          <p>From drive shared links</p>
+          <input type="checkbox" name="drive" id="drive" class="drive" />
+        </div>
+      </div>
       <textarea
         name="links"
         id="links"

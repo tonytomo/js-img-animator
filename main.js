@@ -2,6 +2,7 @@ const imgs = document.getElementById("image_wrapper");
 const idxWrapper = document.getElementById("index_wrapper");
 const links = document.getElementById("links");
 const fps = document.getElementById("fps");
+const checkdrive = document.getElementById("drive");
 
 var myscrimg = [];
 
@@ -52,7 +53,22 @@ function removeAllChildNodes(parent) {
 }
 
 function resetLinks() {
-  const allLinks = links.value.split("\n");
+  const getLinks = links.value.split("\n");
+  let allLinks = [];
+
+  const drivechecked = checkdrive.checked;
+  const regex = /https:\/\/drive.google.com\/file\/d\/(.*?)\/view\?usp\=sharing/;
+
+  if (drivechecked) {
+    for (let i = 0; i < getLinks.length; i++) {
+      let newstr = getLinks[i].replace(regex, "$1");
+
+      let newlink = 'https://drive.google.com/uc?id=url'.replace('url', newstr);
+      allLinks.push(newlink);
+    }
+  } else {
+    allLinks = getLinks;
+  }
 
   console.log("timer = " + 1000 / fps.value);
 
