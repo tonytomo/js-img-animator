@@ -53,8 +53,10 @@ function removeAllChildNodes(parent) {
 }
 
 function resetLinks() {
-  const getLinks = links.value.split("\n");
+  const getLinks = links.value.split(/\s+/);
   let allLinks = [];
+
+  console.log(getLinks);
 
   const drivechecked = checkdrive.checked;
   const regex = /https:\/\/drive.google.com\/file\/d\/(.*?)\/view\?usp\=sharing/;
